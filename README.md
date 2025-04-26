@@ -17,12 +17,37 @@ npm install --save-dev html-webpack-plugin
 ### Folder structure
 
 react-webpack/
-├── public/
-│ └── index.html
-├── src/
-│ └── index.jsx
-├── package.json
-├── webpack.config.js
+│
+├── node_modules/ # Installed npm packages
+│
+├── public/ # Public files
+│ ├── index.html # Main HTML template file
+│
+├── src/ # Your source code
+│ ├── assets/ # Any static assets (images, fonts, etc.)
+│ ├── components/ # React components
+│ │ ├── Header.js # Header component
+│ │ ├── Body.js # Body component
+│ ├── index.css # Tailwind CSS import file
+│ ├── index.js # React entry point
+│ ├── AppLayout.jsx # Main App component (with routing, etc.)
+│
+├── .gitignore # Git ignore file
+├── package.json # Project metadata and dependencies
+├── postcss.config.js # PostCSS configuration file (with Tailwind and Autoprefixer)
+├── tailwind.config.js # Tailwind CSS configuration
+├── webpack.config.js # Webpack configuration file
+└── README.md # Project documentation (optional)
 
 - updated the webpack.config.js file with all the entry points, babel config.
 - added .bablerc file at root level
+
+### Added TailwindCSS
+
+```js
+npm install tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9 --save-dev
+Added below files at root level:
+    postcss.config.js:
+    tailwind.config.js:
+Added index.css inder src/ then imported in index.js
+```
