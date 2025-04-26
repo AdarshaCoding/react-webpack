@@ -16,7 +16,7 @@ npm install --save-dev html-webpack-plugin
 
 ### Folder structure
 
-![alt text](image.png)
+![alt text](./src/assets/image.png)
 
 - updated the webpack.config.js file with all the entry points, babel config.
 - added .bablerc file at root level
