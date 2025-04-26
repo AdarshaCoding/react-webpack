@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
   entry: "./src/index.js", // or index.jsx if you renamed it
@@ -27,6 +28,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new ModuleFederationPlugin({
+      name: "host",
+      filename: "remoteEntry.js",
+      remotes: {
+        AboutInHost: "mfe1@http://localhost:3001/remoteEntry.js",
+      },
+      shared: ["react", "react-dom"],
     }),
   ],
   devServer: {
