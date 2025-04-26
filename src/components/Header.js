@@ -10,7 +10,7 @@ const Title = () => {
 
 const Header = () => {
   return (
-    <div className="">
+    <div className="flex">
       <Title />
       <ul>
         <li>Home</li>
