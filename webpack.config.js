@@ -32,10 +32,20 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "host",
       filename: "remoteEntry.js",
+      exposes: {
+        "./appStoreInHost": "./src/store/appStore.js",
+        "./actions": "./src/store/counterSlice.js",
+      },
       remotes: {
         AboutInHost: "mfe1@http://localhost:3001/remoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      // shared: ["react", "react-dom"],
+      shared: {
+        react: { singleton: true, requiredVersion: "^19.0.0" },
+        "react-dom": { singleton: true, requiredVersion: "^19.0.0" },
+        "react-redux": { singleton: true, requiredVersion: "^8.0.0" },
+        "@reduxjs/toolkit": { singleton: true },
+      },
     }),
   ],
   devServer: {

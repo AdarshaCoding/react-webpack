@@ -11,6 +11,7 @@ npm i react react-dom
 npm install --save-dev webpack webpack-cli webpack-dev-server
 npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
 npm install --save-dev html-webpack-plugin
+npm install --save-dev css-loader style-loader postcss-loader
 
 ```
 
@@ -48,6 +49,7 @@ npm i react react-dom
 npm install --save-dev webpack webpack-cli webpack-dev-server
 npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
 npm install --save-dev html-webpack-plugin
+npm install --save-dev css-loader style-loader postcss-loader
 Added .babelrc file into root folder.
 ```
 
@@ -66,3 +68,14 @@ ModuleFederationPlugin:
 - which takes an object with few parameter (name, filename, exposes, remotes), mainly used "remotes"
 
 ### Restart the app if you update webpack.config.js file
+
+### state management
+
+- pass props from host to mfe1
+- setting up redux store
+
+```js
+Install below 2 packages in both host and mfe1
+npm install @reduxjs/toolkit react-redux
+
+```

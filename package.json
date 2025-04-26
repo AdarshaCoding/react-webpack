@@ -10,8 +10,10 @@
   "author": "Adarsha",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.7.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.5.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   },
